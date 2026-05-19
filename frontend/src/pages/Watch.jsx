@@ -207,7 +207,7 @@ const styles = {
   mainContent: {
     display: 'flex',
     flex: 1,
-    gap: '0px', // Блоки стоят вплотную друг к другу по макету
+    gap: '0px',
     alignItems: 'stretch',
     borderRadius: '4px',
     overflow: 'hidden',
@@ -326,11 +326,11 @@ const styles = {
     width: '100%',
   },
   chatTextarea: {
-    width: '100%',
+    width: '85%',
     background: '#ffffff',
     color: '#000000',
     border: 'none',
-    borderRadius: '8px',
+    borderRadius: '16px',
     padding: '12px 36px 12px 12px',
     fontSize: '14px',
     outline: 'none',
@@ -349,7 +349,7 @@ const styles = {
     background: '#1d2cb4',
     color: '#ffffff',
     border: 'none',
-    borderRadius: '8px',
+    borderRadius: '4px',
     padding: '12px',
     fontSize: '15px',
     fontWeight: '500',
