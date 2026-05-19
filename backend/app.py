@@ -6,7 +6,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/api/*": {"origins": "https://webtube.pages.dev"}}, supports_credentials=True) 
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True) 
 
 
 app.config['JWT_SECRET_KEY'] = 'super-secret-key' 
@@ -175,9 +175,16 @@ def update_chat_name():
     
     return jsonify(user.to_dict()), 200
 
+
 @app.route('/')
 def index():
     return jsonify({"status": "Backend is running"}), 200
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
