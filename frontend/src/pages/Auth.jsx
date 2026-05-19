@@ -56,7 +56,7 @@ function Auth({ onLogin }) {
   return (
     <div style={styles.container}>
       {}
-      <div style={styles.logo}>YADRO</div>
+      <div style={styles.logo}>БЮРО 1440</div>
 
       {}
       <div style={styles.tabContainer}>
